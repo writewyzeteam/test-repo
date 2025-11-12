@@ -3,10 +3,8 @@ name: Claude Code Review
 on:
   pull_request:
     types: [opened, synchronize, reopened]
-  issue_comment:
-    types: [created]
 
-yamlpermissions:
+permissions:
   contents: read
   pull-requests: write
   issues: write
@@ -14,13 +12,6 @@ yamlpermissions:
 
 jobs:
   claude-review:
-    # Only run on PR comments or PRs themselves
-    if: |
-      (github.event_name == 'pull_request') ||
-      (github.event_name == 'issue_comment' && 
-       github.event.issue.pull_request &&
-       contains(github.event.comment.body, '@claude'))
-    
     runs-on: ubuntu-latest
     
     steps:
@@ -34,5 +25,3 @@ jobs:
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
           anthropic-api-key: ${{ secrets.ANTHROPIC_API_KEY }}
-          # Auto-review PRs when opened/updated
-          trigger-on-pr: true
