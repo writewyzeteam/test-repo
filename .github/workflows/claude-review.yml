@@ -6,10 +6,11 @@ on:
   issue_comment:
     types: [created]
 
-permissions:
+yamlpermissions:
   contents: read
   pull-requests: write
   issues: write
+  id-token: write
 
 jobs:
   claude-review:
