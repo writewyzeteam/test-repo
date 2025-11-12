@@ -68,3 +68,4 @@ class UserManager:
 Adding user authentication and database handler.
 
 Related to improving user management system.
+
