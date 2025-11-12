@@ -1,4 +1,4 @@
-# Testing AI code review tools
+# Testing AI code review tool options
 
 import sqlite3
 
