@@ -1,4 +1,4 @@
-# Testing code review tools
+# Testing AI code review tools
 
 import sqlite3
 
