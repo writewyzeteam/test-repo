@@ -1,0 +1,3 @@
+# Qodo Merge Configuration File
+[jira]
+jira_base_url = "https://writewyzeteam.atlassian.net"
