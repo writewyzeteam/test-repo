@@ -1,0 +1,9 @@
+# Qodo Merge Configuration File
+# This file configures Qodo Merge's integration with Jira and other features
+
+[jira]
+# Jira Cloud base URL - required for ticket context fetching
+jira_base_url = "https://writewyzeteam.atlassian.net"
+
+# Note: You've already authenticated Qodo with Jira through the app installation,
+# so no API token is needed here. Qodo will use the app authentication.
